@@ -1,0 +1,15 @@
+{
+  "name": "file-syncer-dev",
+  "version": "1.0.0",
+  "description": "A Node.js tool for developers to efficiently sync and monitor files during development, ensuring seamless updates and boosting productivity.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node cp.js"
+  },
+  "dependencies": {
+    "chokidar": "^3.5.3",
+    "fs-extra": "^11.1.1"
+  },
+  "author": "Warming",
+  "license": "MIT"
+}
