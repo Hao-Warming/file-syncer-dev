@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "A Node.js tool for developers to efficiently sync and monitor files during development, ensuring seamless updates and boosting productivity.",
   "main": "index.js",
+  "bin": {
+    "filesync": "./bin/sync.js"
+  },
   "scripts": {
-    "start": "node cp.js"
+    "start": "node bin/sync.js watch"
   },
   "dependencies": {
     "chokidar": "^3.5.3",
