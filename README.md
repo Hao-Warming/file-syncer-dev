@@ -9,10 +9,10 @@
 
 ## 安装
 
-安装必要的依赖项，请运行以下命令：
+在你的项目中，可以用以下方法来安装 file-syncer-dev 命令行工具：
 
 ```bash
-npm install
+npm install -D file-syncer-dev
 ```
 
 ## 配置
@@ -78,10 +78,10 @@ A Node.js tool for developers to efficiently sync and monitor files during devel
 
 ## Installation
 
-To install the necessary dependencies, run the following command:
+In your project, you can install the file-syncer-dev command line tool as follows:
 
 ```bash
-npm install
+npm install -D file-syncer-dev
 ```
 
 ## Configuration
