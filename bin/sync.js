@@ -20,7 +20,7 @@ try {
 const fileSync = new FileSync(fileConfig);
 
 program
-    .name('filesync')
+    .name('filesync-dev')
     .description('A tool to sync and watch files based on configuration')
     .version('1.0.0');
 

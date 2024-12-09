@@ -47,11 +47,15 @@ module.exports = [
 要启动文件同步器，请使用以下命令：
 
 ```bash
-npm start
+filesync-dev watch
 ```
 
 这将开始监控指定的目录，并实时同步任何更改。
 
+### 使用 `sync` 和 `watch` 命令
+
+- **sync**：使用 `filesync-dev sync <keys...>` 命令手动同步指定的目录。此命令将立即将源目录中的所有文件复制到目标目录。
+- **watch**：使用 `filesync-dev watch` 命令启动文件监控模式。此模式下，任何源目录中的更改都会自动同步到目标目录。
 
 ## 许可证
 
@@ -112,11 +116,15 @@ module.exports = [
 To start the file syncer, use the following command:
 
 ```bash
-npm start
+filesync-dev watch
 ```
 
 This will begin monitoring the specified directories and sync any changes in real-time.
 
+### Using `sync` and `watch` Commands
+
+- **sync**: Use the `filesync-dev sync <keys...>` command to manually sync specified directories. This command will immediately copy all files from the source to the target directories.
+- **watch**: Use the `filesync-dev watch` command to start the file monitoring mode. In this mode, any changes in the source directories will be automatically synced to the target directories.
 
 ## License
 

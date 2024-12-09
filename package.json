@@ -4,7 +4,7 @@
   "description": "A Node.js tool for developers to efficiently sync and monitor files during development, ensuring seamless updates and boosting productivity.",
   "main": "index.js",
   "bin": {
-    "filesync": "./bin/sync.js"
+    "filesync-dev": "./bin/sync.js"
   },
   "scripts": {
     "start": "node bin/sync.js watch"
