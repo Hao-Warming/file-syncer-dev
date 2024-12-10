@@ -9,11 +9,21 @@
 
 ## 安装
 
+### 本地安装
+
 在你的项目中，可以用以下方法来安装 file-syncer-dev 命令行工具：
 
 ```bash
 npm install -D file-syncer-dev
 ```
+
+### 全局安装
+
+```bash
+npm install -g file-syncer-dev
+```
+
+安装后，你可以在任意项目中直接使用 filesync-dev 命令。
 
 ## 配置
 
@@ -47,15 +57,19 @@ module.exports = [
 要启动文件同步器，请使用以下命令：
 
 ```bash
-npx filesync-dev watch
+npx filesync-dev watch  # 只安装在项目
+
+# or
+
+filesync-dev watch # 已全局安装
 ```
 
 这将开始监控指定的目录，并实时同步任何更改。
 
 ### 使用 `sync` 和 `watch` 命令
 
-- **sync**：使用 `npx filesync-dev sync <keys...>` 命令手动同步指定的目录。此命令将立即将源目录中的所有文件复制到目标目录。
-- **watch**：使用 `npx filesync-dev watch` 命令启动文件监控模式。此模式下，任何源目录中的更改都会自动同步到目标目录。
+- **sync**：使用 `<npx> filesync-dev sync <keys...>` 命令手动同步指定的目录。此命令将立即将源目录中的所有文件复制到目标目录。
+- **watch**：使用 `<npx> filesync-dev watch` 命令启动文件监控模式。此模式下，任何源目录中的更改都会自动同步到目标目录。
 
 ## 许可证
 
@@ -78,11 +92,21 @@ A Node.js tool for developers to efficiently sync and monitor files during devel
 
 ## Installation
 
+### Local Installation
+
 In your project, you can install the file-syncer-dev command line tool as follows:
 
 ```bash
 npm install -D file-syncer-dev
 ```
+
+### Global Installation
+
+```bash
+npm install -g file-syncer-dev
+```
+
+After installation, you can use the `filesync-dev` command in any project.
 
 ## Configuration
 
@@ -116,15 +140,19 @@ module.exports = [
 To start the file syncer, use the following command:
 
 ```bash
-npx filesync-dev watch
+npx filesync-dev watch  # For local installation
+
+# or
+
+filesync-dev watch # For global installation
 ```
 
 This will begin monitoring the specified directories and sync any changes in real-time.
 
 ### Using `sync` and `watch` Commands
 
-- **sync**: Use the `npx filesync-dev sync <keys...>` command to manually sync specified directories. This command will immediately copy all files from the source to the target directories.
-- **watch**: Use the `npx filesync-dev watch` command to start the file monitoring mode. In this mode, any changes in the source directories will be automatically synced to the target directories.
+- **sync**: Use the `<npx> filesync-dev sync <keys...>` command to manually sync specified directories. This command will immediately copy all files from the source to the target directories.
+- **watch**: Use the `<npx> filesync-dev watch` command to start the file monitoring mode. In this mode, any changes in the source directories will be automatically synced to the target directories.
 
 ## License
 
