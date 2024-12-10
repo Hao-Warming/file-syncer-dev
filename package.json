@@ -1,6 +1,6 @@
 {
   "name": "file-syncer-dev",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A Node.js tool for developers to efficiently sync and monitor files during development, ensuring seamless updates and boosting productivity.",
   "main": "index.js",
   "bin": {
