@@ -15,5 +15,18 @@
     "fs-extra": "^11.1.1"
   },
   "author": "Warming",
-  "license": "MIT"
+  "license": "MIT",
+  "keywords": [
+    "file",
+    "sync",
+    "watch",
+    "development",
+    "nodejs",
+    "productivity"
+  ],
+  "homepage": "https://github.com/Hao-Warming/file-syncer-dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Hao-Warming/file-syncer-dev"
+  }
 }
