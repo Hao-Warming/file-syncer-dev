@@ -22,7 +22,8 @@ const fileSync = new FileSync(fileConfig);
 program
     .name('filesync-dev')
     .description('A tool to sync and watch files based on configuration')
-    .version('1.0.0');
+    .version('1.0.0')
+    .helpOption('-h, --help', 'Display help for command');
 
 program
     .command('watch')
@@ -37,6 +38,8 @@ program
     .action((keys) => {
         keys.forEach(syncFolder);
     });
+
+
 
 program.parse(process.argv);
 
