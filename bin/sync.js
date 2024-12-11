@@ -21,6 +21,7 @@ const loadConfig = () => {
     }
 };
 
+let fileSync;
 program
     .name('filesync-dev')
     .description('A tool to sync and watch files based on configuration')
@@ -41,7 +42,7 @@ program
     .description('Sync specified directories by keys')
     .action((keys) => {
         loadConfig();
-        
+
         const rl = readline.createInterface({
             input: process.stdin,
             output: process.stdout
