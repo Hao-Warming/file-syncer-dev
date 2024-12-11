@@ -3,6 +3,10 @@
 <details>
 <summary>中文说明</summary>
 
+## 简介
+
+`file-syncer-dev` 是一个用于实时同步文件的命令行工具。它可以帮助你快速配置和使用文件同步功能。适用于 npm 包本地调试、小程序子包开发 等其他跨项目的文件同步需求。此外，它同样适用于单一项目的文件同步，确保您的开发流程更加顺畅和高效。
+
 ## 功能
 
 - **实时文件同步**：自动将文件从源目录同步到目标目录。
@@ -84,6 +88,10 @@ filesync-dev watch # 已全局安装
 
 <details open>
 <summary>English Description</summary>
+
+## Introduction
+
+`file-syncer-dev` is a command-line tool for real-time file synchronization. It helps you quickly configure and use file synchronization features. It is suitable for local debugging of npm packages, subpackage development of mini-programs, and other cross-project file synchronization needs. Additionally, it is also applicable for single project file synchronization, ensuring a smoother and more efficient development process.
 
 ## Features
 
