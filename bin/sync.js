@@ -5,20 +5,21 @@ const FileSync = require('../lib/index');
 const path = require('path');
 const fse = require('fs-extra');
 const packageJson = require('../package.json');
+const readline = require('readline');
 
 const program = new Command();
 const configPath = path.resolve(process.cwd(), 'filesync.config.js');
 
 let fileConfig;
-try {
-    fileConfig = require(configPath);
-} catch (error) {
-    console.error(`Configuration file not found: ${configPath}`);
-    console.error('Please ensure a filesync.config.js file is created in the project root directory.');
-    process.exit(1);
-}
-
-const fileSync = new FileSync(fileConfig);
+const loadConfig = () => {
+    try {
+        fileConfig = require(configPath);
+    } catch (error) {
+        console.error(`Configuration file not found: ${configPath}`);
+        console.error('Please ensure a filesync.config.js file is created in the project root directory.');
+        process.exit(1);
+    }
+};
 
 program
     .name('filesync-dev')
@@ -30,6 +31,8 @@ program
     .command('watch')
     .description('Start watching files')
     .action(() => {
+        loadConfig();
+        fileSync = new FileSync(fileConfig);
         fileSync.watchFileChange();
     });
 
@@ -37,7 +40,22 @@ program
     .command('sync <keys...>')
     .description('Sync specified directories by keys')
     .action((keys) => {
-        keys.forEach(syncFolder);
+        loadConfig();
+        
+        const rl = readline.createInterface({
+            input: process.stdin,
+            output: process.stdout
+        });
+
+        rl.question('The entire directory will be deleted and replaced. Are you sure you want to continue? (yes/no) ', (answer) => {
+            if (answer.toLowerCase() === 'yes') {
+                fileSync = new FileSync(fileConfig);
+                keys.forEach(syncFolder);
+            } else {
+                console.log('Sync operation cancelled.');
+            }
+            rl.close();
+        });
     });
 
 program
@@ -51,6 +69,7 @@ program.parse(process.argv);
 
 function syncFolder(key) {
     key = key.trim();
+    
     const item = fileSync.config.find(it => it.key.replace(path.sep, '/') === key);
     if (item) {
         fse.removeSync(item.target);
