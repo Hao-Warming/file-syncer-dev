@@ -4,6 +4,7 @@ const { Command } = require('commander');
 const FileSync = require('../lib/index');
 const path = require('path');
 const fse = require('fs-extra');
+const packageJson = require('../package.json');
 
 const program = new Command();
 const configPath = path.resolve(process.cwd(), 'filesync.config.js');
@@ -22,7 +23,7 @@ const fileSync = new FileSync(fileConfig);
 program
     .name('filesync-dev')
     .description('A tool to sync and watch files based on configuration')
-    .version('1.0.0')
+    .version(packageJson.version)
     .helpOption('-h, --help', 'Display help for command');
 
 program
@@ -39,7 +40,12 @@ program
         keys.forEach(syncFolder);
     });
 
-
+program
+    .command('version')
+    .description('Display the current version')
+    .action(() => {
+        console.log(`Current version: ${packageJson.version}`);
+    });
 
 program.parse(process.argv);
 
