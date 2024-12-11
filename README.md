@@ -1,6 +1,7 @@
 # file-syncer-dev
 
-一个用于开发者在开发过程中高效同步和监控文件的 Node.js 工具，确保无缝更新并提高生产力。
+<details>
+<summary>中文说明</summary>
 
 ## 功能
 
@@ -79,11 +80,10 @@ filesync-dev watch # 已全局安装
 
 如有任何问题或需要支持，请联系 wangmh0910@gmail.com。
 
----
+</details>
 
-# file-syncer-dev
-
-A Node.js tool for developers to efficiently sync and monitor files during development, ensuring seamless updates and boosting productivity.
+<details open>
+<summary>English Description</summary>
 
 ## Features
 
@@ -161,3 +161,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Contact
 
 For any questions or support, please contact wangmh0910@gmail.com.
+
+</details>
